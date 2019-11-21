@@ -60,18 +60,19 @@ class productos extends Model
      * @var array
      */
     protected $casts = [
-        'id'            => 'integer',
-        'nombre'        => 'string',
-        'descripcion'   => 'string',
-        'imagen'        => 'string',
-        'barcode'       => 'string',
-        'categoria_id'  => 'integer',
-        'inventariable' => 'boolean',
-        'umedida'       => 'string',
-        'medida'        => 'string',
-        'stock_min'     => 'integer',
-        'pcompra'       => 'float',
-        'pventa'        => 'float',
+        'id'              => 'integer',
+        'nombre'          => 'string',
+        'descripcion'     => 'string',
+        'imagen'          => 'string',
+        'barcode'         => 'string',
+        'categoria_id'    => 'integer',
+        'inventariable'   => 'boolean',
+        'umedida'         => 'string',
+        'medida'          => 'string',
+        'stock_min'       => 'integer',
+        'pcompra'         => 'float',
+        'pventa'          => 'float',
+        'subcategoria_id' => 'integer'
     ];
 
     /**
@@ -80,8 +81,9 @@ class productos extends Model
      * @var array
      */
     public static $rules = [
-        'nombre' => 'required',
-        'categoria_id' => 'required'
+        'nombre'          => 'required',
+        'categoria_id'    => 'required',
+        'subcategoria_id' => 'required'
     ];
 
     //public $appends = ['stock'];

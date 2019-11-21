@@ -36,6 +36,23 @@
     {!! Form::label('categoria_id', 'Categoría:') !!}
     {!! Form::select('categoria_id', $categorias, null, ['class' => 'form-control', 'required', 'placeholder'=>'Seleccione']) !!}
 </div>
+@php
+  $misubcategoria = null;
+  if(isset($productos->subcategoria_id)){
+    $misubcategoria = $productos->subcategoria_id;
+  }
+
+  if(!isset($subcategorias))
+    {
+      $subcategorias = [];
+    }
+
+@endphp
+<!-- Categoria Id Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('subcategoria_id', 'SubCategoría:') !!}
+    {!! Form::select('subcategoria_id', $subcategorias, $misubcategoria, ['class' => 'form-control', 'required', 'placeholder'=>'Seleccione']) !!}
+</div>
 
 <!-- Inventariable Field -->
 <div class="form-group col-sm-6">
@@ -109,5 +126,22 @@
          $(function () {
            $('[data-toggle="popover"]').popover()
          })
+
+
+         $('#categoria_id').on('change', function(e) {
+           //console.log(e);
+           var categoriaid = e.target.value;
+           //ajax
+           $.get('{{url("categoria")}}/'+categoriaid+'/subcategorias', function(data) {
+             //exito al obtener los datos
+             console.log(data);
+             $('#subcategoria_id').empty();
+             $.each(data, function(index, cuentas) {
+               console.log(cuentas);
+               $('#subcategoria_id').append('<option value ="' + cuentas.id + '">'+cuentas.nombre+'</option>' );
+             });
+
+           });
+         });
 </script>
 @endsection

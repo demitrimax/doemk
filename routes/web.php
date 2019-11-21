@@ -84,4 +84,6 @@ Route::group(['middleware'=>['auth']], function() {
   Route::resource('docscategorias', 'docscategoriasController');
 
   Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+  Route::resource('subcategorias', 'subcategoriasController');
+  Route::get('categoria/{id}/subcategorias', 'subcategoriasController@subcategoriasByCategoria');
 });

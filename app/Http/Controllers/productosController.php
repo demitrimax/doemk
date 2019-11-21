@@ -114,6 +114,7 @@ class productosController extends AppBaseController
             return redirect(route('productos.index'));
         }
         $categorias = categorias::pluck('nombre','id');
+        
         return view('productos.edit')->with(compact('productos','categorias'));
     }
 
