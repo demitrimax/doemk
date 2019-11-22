@@ -11,7 +11,7 @@
 
   <meta name="author" content="Themefisher.com">
 
-  <title>AMMEX | ADMINISTRACION DE PROYECTOS</title>
+  <title>{{ config('app.name', 'Doe MaryKay') }}</title>
 
 <!-- Mobile Specific Meta
   ================================================== -->
@@ -96,8 +96,8 @@
 
         <!-- logo -->
         <a class="navbar-brand logo" href="index.html">
-          <img class="logo-default" src="{{asset('logos/ammex_logo.png')}}" alt="logo" />
-          <img class="logo-white" src="{{asset('logos/ammex_logo_white.png')}}" alt="logo" />
+          <img class="logo-default" src="{{asset('logos/doe_logo.png')}}" alt="logo" />
+          <img class="logo-white" src="{{asset('logos/doe_logo_white.png')}}" alt="logo" />
         </a>
         <!-- /logo -->
       </div>
