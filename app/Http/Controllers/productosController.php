@@ -12,6 +12,7 @@ use Alert;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 use App\Models\categorias;
+use App\Models\subcategorias;
 use App\Models\productos;
 use Yajra\Datatables\Datatables;
 
@@ -114,8 +115,9 @@ class productosController extends AppBaseController
             return redirect(route('productos.index'));
         }
         $categorias = categorias::pluck('nombre','id');
-        
-        return view('productos.edit')->with(compact('productos','categorias'));
+        $subcategorias = subcategorias::where('categoria_id', $productos->categoria_id)->pluck('nombre','id');
+
+        return view('productos.edit')->with(compact('productos','categorias','subcategorias'));
     }
 
     /**

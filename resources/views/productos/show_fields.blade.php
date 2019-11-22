@@ -18,6 +18,25 @@
   <td>{!! $productos->descripcion !!}</td>
 </tr>
 
+<!-- Codigo Field -->
+<tr>
+  <th>{!! Form::label('codigo_1', 'Codigo 1:') !!}</th>
+  <td>{!! $productos->codigo_1 !!}</td>
+</tr>
+
+<!-- Codigo Field -->
+<tr>
+  <th>{!! Form::label('codigo_2', 'Codigo 2:') !!}</th>
+  <td>{!! $productos->codigo_2 !!}</td>
+</tr>
+
+<!-- Codigo Field -->
+<tr>
+  <th>{!! Form::label('codigo_3', 'Codigo 3:') !!}</th>
+  <td>{!! $productos->codigo_3 !!}</td>
+</tr>
+
+
 
 <!-- Imagen Field -->
 <tr>

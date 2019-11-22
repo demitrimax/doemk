@@ -6,7 +6,7 @@
 <!-- Nombre Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('nombre', 'Nombre:') !!}
-    {!! Form::text('nombre', null, ['class' => 'form-control maxlen', 'required', 'maxlength'=>'75']) !!}
+    {!! Form::text('nombre', null, ['class' => 'form-control maxlen', 'required', 'maxlength'=>'100']) !!}
 </div>
 
 <!-- Descripcion Field -->
@@ -38,20 +38,38 @@
 </div>
 @php
   $misubcategoria = null;
+
   if(isset($productos->subcategoria_id)){
     $misubcategoria = $productos->subcategoria_id;
   }
-
-  if(!isset($subcategorias))
-    {
-      $subcategorias = [];
-    }
+  $lassubcategorias = [];
+  if(isset($subcategorias)){
+    $lassubcategorias = $subcategorias;
+  }
 
 @endphp
 <!-- Categoria Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('subcategoria_id', 'SubCategoría:') !!}
-    {!! Form::select('subcategoria_id', $subcategorias, $misubcategoria, ['class' => 'form-control', 'required', 'placeholder'=>'Seleccione']) !!}
+    {!! Form::select('subcategoria_id', $lassubcategorias, $misubcategoria, ['class' => 'form-control', 'required', 'placeholder'=>'Seleccione']) !!}
+</div>
+
+<!--Codigo_1 Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('codigo_1', 'Código 1:') !!}
+    {!! Form::text('codigo_1', null, ['class' => 'form-control maxlen', 'maxlength'=>'30']) !!}
+</div>
+
+<!--Codigo_2 Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('codigo_2', 'Código 2:') !!}
+    {!! Form::text('codigo_2', null, ['class' => 'form-control maxlen', 'maxlength'=>'30']) !!}
+</div>
+
+<!--Codigo_3 Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('codigo_3', 'Código 3:') !!}
+    {!! Form::text('codigo_3', null, ['class' => 'form-control maxlen', 'maxlength'=>'30']) !!}
 </div>
 
 <!-- Inventariable Field -->

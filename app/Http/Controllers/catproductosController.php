@@ -108,7 +108,7 @@ class catproductosController extends AppBaseController
 
             return redirect(route('catproductos.index'));
         }
-
+        
         return view('catproductos.edit')->with('catproductos', $catproductos);
     }
 

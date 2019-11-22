@@ -134,7 +134,7 @@ Welcome Slider
 		<div class="row">
 			<div class="col-md-12">
 				<div class="block">
-					<h1 class="wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".3s" >Tus Proyectos <br> Nuestros objetivos</h1>
+					<h1 class="wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".3s" >Una Mujer <br> Puede</h1>
 					<p class="wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".5s">Trabajamos día con día para servir con eficiencia y honestidad. Lider en el mercado de proyectos de servicio.</p>
 					<ul class="list-inline wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".7s">
 						<li>

@@ -52,6 +52,9 @@ class productos extends Model
         'stock_min',
         'pventa',
         'pcompra',
+        'codigo_1',
+        'codigo_2',
+        'codigo_3',
     ];
 
     /**
@@ -72,7 +75,10 @@ class productos extends Model
         'stock_min'       => 'integer',
         'pcompra'         => 'float',
         'pventa'          => 'float',
-        'subcategoria_id' => 'integer'
+        'subcategoria_id' => 'integer',
+        'codigo_1'        => 'string',
+        'codigo_2'        => 'string',
+        'codigo_3'        => 'string',
     ];
 
     /**
