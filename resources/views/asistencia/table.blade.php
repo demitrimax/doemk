@@ -26,7 +26,7 @@
 
 </div>
 
-
+<div class="table-responsive">
 <table class="table table-responsive" id="empleados-table">
     <thead>
         <tr>
@@ -102,6 +102,7 @@
     @endforeach
     </tbody>
 </table>
+</div>
 
 <button type="submit" class="btn btn-success" >Guardar Asistencia</button>
 {!! Form::close() !!}

@@ -46,6 +46,7 @@ $(document).ready(function() {
 var table = $('#productos-table').DataTable({
     serverSide: true,
     processing: true,
+    responsive: !0,
     ajax: "{!! url('inventario/lista/productos') !!}",
     stateSave: false,
     columns: [

@@ -21,7 +21,7 @@
                         @include('flash::message')
 
                         <div class="clearfix"></div>
-                        <div class="box box-primary">
+                        <div class="box box-primary table-responsive">
                             <div class="box-body">
                                     @include('clientes.table')
                             </div>

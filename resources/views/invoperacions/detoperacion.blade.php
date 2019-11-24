@@ -1,4 +1,5 @@
 @if($invoperacion->invdetoperacions->count()>0)
+<div class="table-responsive">
 <table class="table mg-b-0 table-primary">
   <thead class="bg-info">
     <tr>
@@ -42,6 +43,7 @@
     @endforeach
   </tbody>
 </table>
+</div>
 {!! Form::open(['route' => ['inventario.producto.surtido.parcial', $invoperacion->id], 'id'=>'formparcial'.$invoperacion->id]) !!}
   {!! Form::hidden('parcial', null, ['id'=>'parcial'])!!}
   {!! Form::hidden('detoperacionid', null, ['id'=>'detoperacionid'])!!}

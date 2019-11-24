@@ -1,5 +1,5 @@
 
-
+<div class="table-responsive">
 <table class="table tabla-conceptos table-responsive table-responsive-xl" id="conceptos">
   <thead class=" {!!$operaciontipo == 'entrada' ? 'bg-warning' : 'bg-info' !!} text-white fixed">
     <tr>
@@ -47,6 +47,7 @@
     </tr>
   </tbody>
 </table>
+</div>
 
   <div class="row">
     <div class="col-md-6">

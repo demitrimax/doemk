@@ -1,3 +1,4 @@
+<div class="table-responsive">
 <table class="table table-responsive" id="invoperacions-table">
     <thead>
         <tr>
@@ -38,7 +39,7 @@
     @endforeach
     </tbody>
 </table>
-
+</div>
 @section('scripts')
 <script>
 function ConfirmDelete(id) {
