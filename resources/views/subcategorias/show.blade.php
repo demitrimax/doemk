@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app3')
 @section('title',config('app.name').' | Subcategorias' )
 @section('content')
     <section class="content-header">
@@ -15,7 +15,7 @@
                     @include('subcategorias.show_fields')
                     </tbody>
                   </table>
-                    <a href="{!! route('subcategorias.index') !!}" class="btn btn-default">Back</a>
+                    <a href="{!! route('subcategorias.index') !!}" class="btn btn-default">Regresar</a>
                 </div>
             </div>
         </div>

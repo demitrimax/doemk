@@ -11,10 +11,12 @@
 <table class="table table-responsive table-hover" id="productos-table">
     <thead>
         <tr>
+            <th>Código</th>
             <th>Nombre</th>
             <th>Categoría</th>
             <th>U. Medida</th>
             <th>Existencias</th>
+            <th>P. Venta</th>
             <th>Acciones</th>
         </tr>
     </thead>
@@ -47,6 +49,7 @@ var table = $('#productos-table').DataTable({
     ajax: "{!! url('inventario/lista/productos') !!}",
     stateSave: false,
     columns: [
+        { data:'barcode', name: 'barcode' },
         { data: 'nombre', name: 'nombre',
         'render': function(val, _, obj) {
               return '<a href="{{url('productos')}}/' + obj.id + '" target="_self">' + val + '</a>'; }
@@ -54,6 +57,7 @@ var table = $('#productos-table').DataTable({
         { data:'categoria.nombre', name: 'categoria.nombre' },
         { data:'umedida', name: 'medida' },
         { data:'stock', name: 'stock' },
+        { data: 'pventa', name: 'pventa' },
         { data:'acciones', name: 'acciones', orderable: false, searchable: false,
         'render': function(val, _, obj) {
 

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app3')
 @section('title',config('app.name').' | Alta de Nuevo Subcategorias' )
 @section('content')
 <div class="row">
@@ -18,5 +18,5 @@
           </div>
       </div>
   </div>
-  
+
 @endsection

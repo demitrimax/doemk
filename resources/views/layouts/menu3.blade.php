@@ -28,7 +28,8 @@
 
         @php
         if( Request::is('inventario*') || Request::is('productos*') || Request::is('categorias*')
-            || Request::is('bodegas*') || Request::is('clientes*') || Request::is('invoperacions*') ) {
+            || Request::is('bodegas*') || Request::is('clientes*') || Request::is('invoperacions*')
+            || Request::is('subcategorias*') || Request::is('invproveedores*') ) {
             $varActive = "nav-expanded nav-active";
         } else {
           $varActive = "";

@@ -1,5 +1,5 @@
 {{-- \resources\views\permissions\index.blade.php --}}
-@extends('layouts.app')
+@extends('layouts.app3')
 @section('title',config('app.name').' | Permisos' )
 
 @section('css')
