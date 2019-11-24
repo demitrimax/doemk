@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app3')
 
 @section('title',config('app.name').' | Empleados' )
 
@@ -27,7 +27,7 @@
                             </div>
                         </div>
                         <div class="text-center">
-                            
+
                         </div>
                     </div>
                 </div> <!-- panel-body -->

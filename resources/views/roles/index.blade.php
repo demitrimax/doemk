@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app3')
 
 @section('title',config('app.name').' | Administración de Roles' )
 
@@ -13,8 +13,6 @@
             <div class="panel-heading with-border">
               <h3 class="panel-title">Administrador de Roles</h3>
 
-
-
             </div>
             @can('role-create')
               <a class="btn btn-success pull-right" href="{{ route('roles.create') }}"> Alta de Nuevo Rol</a>
@@ -25,6 +23,7 @@
             </div>
             @endif
             <!-- /.box-header -->
+            <div class="panel-body">
             <table class="table table-bordered table-responsive">
               <tr>
                  <th>No</th>
@@ -56,6 +55,7 @@
               </div>
 
           </div>
+        </div>
           <!-- /.box -->
 
 

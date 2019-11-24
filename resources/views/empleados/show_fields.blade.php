@@ -13,7 +13,7 @@
             </div>
           <div class="panel-body panel-profile">
             <a href="javascript:verAvatar();">
-            <img class="profile-user-img img-responsive img-circle thumb-md center-block" src="{{asset($empleados->ufoto)}}" alt="User profile picture">
+            <img class="profile-user-img img-responsive img-circle thumb-md center-block" src="{{asset($empleados->ufoto)}}" alt="User profile picture" width="85" height="85">
           </a>
             <h3 class="profile-username text-center">{{$empleados->nombre.' '.$empleados->apellidos}}</h3>
 

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app3')
 @section('title',config('app.name').' | Editar Usuario' )
 @section('css')
 <link href="{{asset('adminlte/bower_components/select2/dist/css/select2.min.css')}}" rel="stylesheet" />

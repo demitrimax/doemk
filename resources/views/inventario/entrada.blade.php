@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app3')
 
 @section('title',config('app.name').' | Inventario Entrada' )
 
@@ -22,6 +22,7 @@
 <div class="panel panel-primary">
           <div class="panel-heading">Registro de Entradas del Inventario</div>
 
+            <div class="panel-body bd bd-t-0">
 
           <div class="form-layout">
             <div class="row">
@@ -54,6 +55,7 @@
               </div><!-- col-4 -->
 
             </div><!-- row -->
+          </div>
             <div class="row mg-b-25">
               <div class="col-lg-12">
 

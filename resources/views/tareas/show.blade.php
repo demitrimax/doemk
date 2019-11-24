@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app3')
 @section('title',config('app.name').' | Tareas' )
 @section('content')
     <section class="content-header">

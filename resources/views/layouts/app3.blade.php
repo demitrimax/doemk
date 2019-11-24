@@ -18,12 +18,13 @@
 
     <!-- Web Fonts  -->
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
 
 		<!-- Vendor CSS -->
 		<link rel="stylesheet" href="{{asset('octopus/assets/vendor/bootstrap/css/bootstrap.css')}}" />
 		<link rel="stylesheet" href="{{asset('octopus/assets/vendor/font-awesome/css/font-awesome.css')}}" />
 		<link rel="stylesheet" href="{{asset('octopus/assets/vendor/magnific-popup/magnific-popup.css')}}" />
-		<link rel="stylesheet" href="{{asset('octopus/assets/vendor/bootstrap-datepicker/css/datepicker3.css')}}" />
+		<!--<link rel="stylesheet" href="{{asset('octopus/assets/vendor/bootstrap-datepicker/css/datepicker3.css')}}" /> -->
 
 		<!-- Specific Page Vendor CSS -->
 		<link rel="stylesheet" href="{{asset('octopus/assets/vendor/jquery-ui/css/ui-lightness/jquery-ui-1.10.4.custom.css')}}" />
@@ -41,6 +42,7 @@
 
 		<!-- Head Libs -->
 		<script src="{{asset('octopus/assets/vendor/modernizr/modernizr.js')}}"></script>
+		<link href="{{asset('appzia/plugins/bootstrap-sweetalert/sweet-alert.css')}}" rel="stylesheet" type="text/css">
     <style>
     .swal2-popup {
       font-size: 1.6rem !important;
@@ -180,11 +182,11 @@
   		<script src="{{asset('octopus/assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js')}}"></script>
   		<script src="{{asset('octopus/assets/vendor/bootstrap/js/bootstrap.js')}}"></script>
   		<script src="{{asset('octopus/assets/vendor/nanoscroller/nanoscroller.js')}}"></script>
-  		<script src="{{asset('octopus/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js')}}"></script>
+  		<!--<script src="{{asset('octopus/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js')}}"></script> -->
   		<script src="{{asset('octopus/assets/vendor/magnific-popup/magnific-popup.js')}}"></script>
   		<script src="{{asset('octopus/assets/vendor/jquery-placeholder/jquery.placeholder.js')}}"></script>
 
-      @yield('scripts')
+
   		<!-- Specific Page Vendor -->
       <!--
       <script src="assets/vendor/jquery-ui/js/jquery-ui-1.10.4.custom.js"></script>
@@ -222,6 +224,9 @@
   		<!-- Theme Initialization Files -->
   		<script src="{{asset('octopus/assets/javascripts/theme.init.js')}}"></script>
 
+      <script src="{{asset('appzia/plugins/bootstrap-sweetalert/sweet-alert.min.js')}}"></script>
+      @include('sweetalert::alert')
+      @yield('scripts')
 
   		<!-- Examples -->
       <!--

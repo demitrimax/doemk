@@ -11,7 +11,7 @@
     <tbody>
     @foreach($empleados as $empleados)
         <tr>
-            <td><img src="{{asset($empleados->ufoto)}}" alt="user-img" class="thumb-sm img-circle"></td>
+            <td><figure class="profile-picture"> <img src="{{asset($empleados->ufoto)}}" alt="user-img" class="thumb-sm img-circle" width=32 height=32></figure></td>
             <td><a href="{!! route('empleados.show', [$empleados->id]) !!}">{!! $empleados->nombre.' '.$empleados->apellidos !!}</a></td>
             <td>{!! $empleados->curp !!}</td>
             <td>{!! $empleados->bajatemp == 1 ? '<span class="label label-danger">Baja Temporal</span>' : '<span class="label label-primary">Activo</span>'!!}</td>

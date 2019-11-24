@@ -102,7 +102,7 @@
   <div id="userbox" class="userbox">
     <a href="{{url('/profile')}}" data-toggle="dropdown">
       <figure class="profile-picture">
-        <img src="{{asset(Auth::user()->uavatar)}}" alt="{{Auth::user()->name}}" class="img-circle" data-lock-picture="{{asset('octopus/assets/images/!logged-user.jpg')}}" />
+        <img src="{{asset(Auth::user()->uavatar)}}" alt="{{Auth::user()->name}}" class="img-circle" data-lock-picture="{{asset(Auth::user()->uavatar)}}" />
       </figure>
       <div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@JSOFT.com">
         <span class="name">{{Auth::user()->name}}</span>

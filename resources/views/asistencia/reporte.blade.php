@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app3')
 
 @section('title',config('app.name').' | Reporte Mensual de Asistencia' )
 
@@ -16,7 +16,7 @@
     @foreach($asistenciames->unique('empleado_id') as $empleadoasiste)
     @if($empleadoasiste->empleado)
     <tr>
-      <td>  
+      <td>
         {{$empleadoasiste->empleado->nombre.' '.$empleadoasiste->empleado->apellidos}}</td>
       @foreach($misfechas as $fec)
         <td>

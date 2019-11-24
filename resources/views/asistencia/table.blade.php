@@ -41,7 +41,7 @@
     <tbody>
     @foreach($empleados as $empleados)
         <tr>
-            <td><img src="{{asset($empleados->ufoto)}}" alt="user-img" class="thumb-sm img-circle">
+            <td><img src="{{asset($empleados->ufoto)}}" alt="user-img" class="thumb-sm img-circle" width="32" height="32">
               {!! $empleados->nombre.' '.$empleados->apellidos !!}</td>
             <td>{!! $empleados->curp !!}</td>
             {!! Form::hidden('empleados['.$empleados->id.'][id]', $empleados->id) !!}

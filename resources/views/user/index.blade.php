@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app3')
 
 @section('title',config('app.name').' | Administración de Usuarios' )
 
@@ -23,7 +23,7 @@
             <!-- /.box-header -->
 
                 <a class="btn btn-success" href="{{ route('user.create') }}"> Alta de Nuevo Usuario</a>
-            
+
 
               <div class="table-responsive">
                 <table class="table table-bordered">

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app3')
 @section('title',config('app.name').' | Perfil de Usuario' )
 @section('content')
 
@@ -19,7 +19,7 @@
               </div>
             <div class="panel-body panel-profile">
               <a href="javascript:verAvatar();">
-              <img class="profile-user-img img-responsive img-circle thumb-md center-block" src="{{asset(Auth::user()->uavatar)}}" alt="User profile picture">
+              <img class="profile-user-img img-responsive img-circle thumb-md center-block img-thumbnail" src="{{asset(Auth::user()->uavatar)}}" alt="User profile picture" width="85" height="85">
             </a>
               <h3 class="profile-username text-center">{{Auth::user()->name}}</h3>
 

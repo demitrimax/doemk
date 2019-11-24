@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app3')
 @section('title',config('app.name').' | Empleados' )
 @section('content')
 
@@ -17,5 +17,5 @@
             </div>
         </div>
     </div>
-    
+
 @endsection
