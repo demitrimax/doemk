@@ -177,6 +177,7 @@ function CalcularTotales()
       var civa = parseFloat(subtotal * 1.16);
       $('#civa').val(civa);
     });
+    
 var IdRow = 0;
 $('#btnagregarotro').click(function() {
   //$(this).removeClass("btn-warning");

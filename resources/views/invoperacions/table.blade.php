@@ -20,7 +20,7 @@
             <td>{!! $invoperacion->numfactura !!}</td>
             <td>{!! number_format($invoperacion->total,2) !!}</td>
             <td>{!! $invoperacion->fecha->format('d-m-Y') !!}</td>
-            <td><span class="badge badge-{{$invoperacion->estatush['label']}}"> {!! $invoperacion->estatush['estado'] !!}</span></td>
+            <td><span class="label label-{{$invoperacion->estatush['label']}}"> {!! $invoperacion->estatush['estado'] !!}</span></td>
             <td>
                 {!! Form::open(['route' => ['invoperacions.destroy', $invoperacion->id], 'method' => 'delete', 'id'=>'form'.$invoperacion->id]) !!}
                 <div class='btn-group'>

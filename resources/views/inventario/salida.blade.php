@@ -19,15 +19,20 @@
   {!! Form::hidden('usuario_id', Auth::user()->id) !!}
   {!! Form::hidden('tipo_mov', 'Entrada') !!}
 <div class="panel panel-primary">
-          <h6 class="panel-heading">Registro de Salidas del Inventario</h6>
+        <div class="panel-heading card-header-default bg-primary">
+          Registro de Salidas del Inventario
+        </div><!-- card-header -->
+
+          <div class="panel-body bd bd-t-0">
           <p class="mg-b-20 mg-sm-b-30">Movimiento de Salidas</p>
+
 
           <div class="form-layout">
             <div class="row mg-b-25">
 
               <div class="col-lg-8">
                 <div class="form-group">
-                  <label class="form-control-label">Cliente/Técnico: <span class="tx-danger">*</span></label>
+                  <label class="form-control-label">Cliente: <span class="tx-danger">*</span></label>
                   {!! Form::select('cliente_id', $clientes, null, ['class'=>'form-control', 'required', 'placeholder'=>'Selecciones un cliente o técnico'])!!}
                 </div>
               </div><!-- col-4 -->

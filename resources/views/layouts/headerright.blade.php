@@ -30,10 +30,10 @@
             <li>
               <p class="clearfix mb-xs">
                 <span class="message pull-left">{{$tarea->nombre}}</span>
-                <span class="message pull-right text-dark">60%</span>
+                <span class="message pull-right text-dark">{{$tarea->avance_porc}}%</span>
               </p>
               <div class="progress progress-xs light">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="{{$tarea->avance_porc}}" aria-valuemin="0" aria-valuemax="100" style="width: {{$tarea->avance_porc}}%;"></div>
               </div>
             </li>
             @endforeach

@@ -13,11 +13,11 @@
       <ul class="nav nav-main">
 
         <li class="{{ Request::is('home*') ? 'nav-active' : '' }}">
-            <a href="{{url('home')}}" class="waves-effect"><i class="fa fa-home"></i><span> Dashboard <span class="badge badge-primary pull-right">1</span></span></a>
+            <a href="{{url('home')}}" class="waves-effect"><i class="fa fa-home"></i><span> Dashboard <span class="label label-primary pull-right">1</span></span></a>
         </li>
         @can('tareas-list')
         <li class="{{ Request::is('tareas*') ? 'nav-active' : '' }}">
-            <a href="{!! route('tareas.index') !!}"><i class="fa fa-check-circle"></i><span>Tareas {!! $nuevastareas->count()>0 ? '<span class="badge badge-primary pull-right">'.$nuevastareas->count().'</span></a>' : '' !!}</span></a>
+            <a href="{!! route('tareas.index') !!}"><i class="fa fa-check-circle"></i><span>Tareas {!! $nuevastareas->count()>0 ? '<span class="label label-primary pull-right">'.$nuevastareas->count().'</span></a>' : '' !!}</span></a>
         </li>
         @endcan
         @can('asistencia')
@@ -28,7 +28,7 @@
 
         @php
         if( Request::is('inventario*') || Request::is('productos*') || Request::is('categorias*')
-            || Request::is('bodegas*') || Request::is('clientes*') ) {
+            || Request::is('bodegas*') || Request::is('clientes*') || Request::is('invoperacions*') ) {
             $varActive = "nav-expanded nav-active";
         } else {
           $varActive = "";

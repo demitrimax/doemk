@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app3')
 @section('title',config('app.name').' | Operación de Inventario' )
 @section('content')
 

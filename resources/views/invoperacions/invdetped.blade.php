@@ -1,6 +1,6 @@
 <div class="panel pd-20 pd-sm-40">
           <h6 class="panel-body-title">Operación ID: {!! $invoperacion->folio !!}</h6>
-          <p class="mg-b-20 mg-sm-b-30">Tipo de Operación:<b> {!! $invoperacion->tipo_mov !!}</b> <span class="badge badge-{{$invoperacion->estatush['label']}}">{!! $invoperacion->estatush['estado'] !!}</span></p>
+          <p class="mg-b-20 mg-sm-b-30">Tipo de Operación:<b> {!! $invoperacion->tipo_mov !!}</b> <span class="label label-{{$invoperacion->estatush['label']}}">{!! $invoperacion->estatush['estado'] !!}</span></p>
 
           <div class="form-layout">
             <div class="row">
@@ -36,7 +36,9 @@
 
               <div class="col-md-2">
                   {!! Form::label('bodega_id', 'Bodega:') !!}
+                  @if($invoperacion->invdetoperacions->count() > 0)
                   {!! Form::text('bodega_id', $invoperacion->invdetoperacions->unique('bodega_id')->get(0)->bodega->nombre, ['class'=>'form-control', 'readonly']) !!}
+                  @endif
               </div><!-- col-4 -->
 
             </div><!-- row -->
