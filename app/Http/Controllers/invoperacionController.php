@@ -192,7 +192,10 @@ class invoperacionController extends AppBaseController
     public function entrada()
     {
       $proveedores = invproveedores::orderBy('nombre','asc')->pluck('nombre','id');
-      $productos = productos::where('inventariable',0)->orderBy('nombre','asc')->pluck('nombre','id');
+      $productos = productos::selectRaw( "*, CONCAT(barcode, ' ', nombre) as nombrecod")
+                              ->where('inventariable',0)
+                              ->orderBy('nombre','asc')
+                              ->pluck('nombrecod','id');
       $bodegas = bodegas::pluck('nombre','id');
       $operaciontipo = 'entrada';
       $facturara = facturara::pluck('nombre', 'id');
@@ -408,7 +411,7 @@ class invoperacionController extends AppBaseController
         $operaciones = $bodega->operacioninvent->unique('producto_id');
         foreach($operaciones as $operacion){
           if($bodega->stockpro($operacion->producto->id)> 0){
-              $productos[] = ['id'=>$operacion->producto->id, 'nombre'=>$operacion->producto->nombre, 'stock' => $bodega->stockpro($operacion->producto->id)];
+              $productos[] = ['id'=>$operacion->producto->id, 'nombre'=>$operacion->producto->barcode.' '.$operacion->producto->nombre, 'stock' => $bodega->stockpro($operacion->producto->id)];
           }
 
         }
