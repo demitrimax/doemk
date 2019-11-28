@@ -2,17 +2,22 @@
 @section('title',config('app.name').' | Clientes' )
 @section('content')
     <div class="content">
-        <div class="card">
-        <div class="card-header card-header-default">
-          <h3 class="card-title">Clientes</h3>
+        <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Clientes</h3>
         </div>
-            <div class="card-body">
-                <div class="row" style="padding-left: 20px">
-
+            <div class="panel-body">
+                <div class="row">
+                  <div class="col-md-6">
                     @include('clientes.show_fields')
+                  </div>
 
-                    <a href="{!! route('clientes.index') !!}" class="btn btn-default">Regresar</a>
+                  <div class="col-md-6">
+                    @include('clientes.misoperaciones')
+                  </div>
+
                 </div>
+                <a href="{!! route('clientes.index') !!}" class="btn btn-default">Regresar</a>
             </div>
         </div>
     </div>

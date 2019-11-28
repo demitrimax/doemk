@@ -156,6 +156,13 @@ class clientesController extends AppBaseController
 
             return redirect(route('clientes.index'));
         }
+        if($clientes->invoperacion->count() > 0 ){
+          $mensajeerror = 'No se puede eliminar, el cliente tiene relacionada operaciones';
+          Flash::error($mensajeerror);
+          Alert::error($mensajeerror);
+
+          return redirect(route('clientes.index'));
+        }
 
         $this->clientesRepository->delete($id);
 
