@@ -18,6 +18,9 @@
 
                 </div>
                 <a href="{!! route('clientes.index') !!}" class="btn btn-default">Regresar</a>
+                @can('clientes-edit')
+                <a href="{!! route('clientes.edit', [$clientes->id]) !!}" class="btn btn-primary">Editar</a>
+                @endcan
             </div>
         </div>
     </div>
